@@ -165,7 +165,17 @@ contract SupplyChain is Ownable, ConsumerRole, DistributorRole, FarmerRole, Reta
   {
 
     // Add the new item as part of Harvest
-    Item memory newItem = Item(_upc, _originFarmerID, _originFarmName, _originFarmInformation, _originFarmLatitude, _originFarmLongitude, _productNotes);
+    // Item memory newItem = Item(_upc, _originFarmerID, _originFarmName, _originFarmInformation, _originFarmLatitude, _originFarmLongitude, _productNotes);
+    items[sku] = Item({
+      upc : _upc, 
+      originFarmerID: _originFarmerID,
+      originFarmName: _originFarmName,
+      originFarmInformation: _originFarmInformation,
+      originFarmLatitude : _originFarmLatitude,
+      originFarmLongitude: _originFarmLongitude, 
+      productNotes: _productNotes
+    })
+    
     // Increment sku
     sku = sku + 1;
     // Emit the appropriate event
@@ -177,6 +187,7 @@ contract SupplyChain is Ownable, ConsumerRole, DistributorRole, FarmerRole, Reta
   onlyFarmer
   // Call modifier to check if upc has passed previous supply chain stage
     harvested(_upc);
+    
   // Call modifier to verify caller of this function
     verifyCaller(items[_upc].originFarmerID);
   }
