@@ -271,13 +271,13 @@ contract SupplyChain is Ownable, ConsumerRole, DistributorRole, FarmerRole, Reta
   // Define a function 'purchaseItem' that allows the consumer to mark an item 'Purchased'
   // Use the above modifiers to check if the item is received
   function purchaseItem(uint _upc) public 
-    consumerOnly
+    onlyConsumer
     // Call modifier to check if upc has passed previous supply chain stage
-    forSale(_upc)
+    received(_upc)
     // Access Control List enforced by calling Smart Contract / DApp
     {
     // Update the appropriate fields - ownerID, consumerID, itemState
-    items[_upc].ownerId = msg.sender;
+    items[_upc].ownerID = msg.sender;
     items[_upc].consumerID = msg.sender;
     items[_upc] = State.Purchased;
     // Emit the appropriate event
@@ -298,18 +298,16 @@ contract SupplyChain is Ownable, ConsumerRole, DistributorRole, FarmerRole, Reta
   ) 
   {
   // Assign values to the 8 parameters
-  
-    
   return 
   (
-  itemSKU,
-  itemUPC,
-  ownerID,
-  originFarmerID,
-  originFarmName,
-  originFarmInformation,
-  originFarmLatitude,
-  originFarmLongitude
+  itemSKU = items[_upc].sku,
+  itemUPC = items[_upc].uupc,
+  ownerID = items[_upc].ownerID,
+  originFarmerID = items[_upc].originFarmerID,
+  originFarmName = items[_upc].originFarmName,
+  originFarmInformation = items[_upc].originFarmInformation,
+  originFarmLatitude = ,items[_upc].originFarmLatitude,
+  originFarmLongitude = items[_upc].originFarmLongitude
   );
   }
 
@@ -332,15 +330,15 @@ contract SupplyChain is Ownable, ConsumerRole, DistributorRole, FarmerRole, Reta
     
   return 
   (
-  itemSKU,
-  itemUPC,
-  productID,
-  productNotes,
-  productPrice,
-  itemState,
-  distributorID,
-  retailerID,
-  consumerID
+  itemSKU = items[_upc].sku,
+  itemUPC = items[_upc].upc,
+  productID = items[_upc].pproductID,
+  productNotes = items[_upc].productNotes,
+  productPrice = items[_upc].productPrice,
+  itemState = items[_upc].itemState,
+  distributorID = items[_upc].distributorID,
+  retailerID = items[_upc].retailerID,
+  consumerID = items[_upc].consumerID
   );
   }
 }
