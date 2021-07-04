@@ -1,8 +1,6 @@
 const HDWalletProvider = require('truffle-hdwallet-provider');
-const infuraKey = "49e069ced9314a6ea21b823c839321cd";
-//
-// const fs = require('fs');
-const mnemonic = "put mnuemonic here";
+require('dotenv').config()
+
 
 module.exports = {
   networks: {
@@ -14,7 +12,7 @@ module.exports = {
   },
   compilers: {
     solc: {
-      version: "0.5.5",    // Fetch exact version from solc-bin (default: truffle's version)
+      // version: "0.5.3",    // Fetch exact version from solc-bin (default: truffle's version)
       // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
       // settings: {          // See the solidity docs for advice about optimization and evmVersion
       //  optimizer: {
