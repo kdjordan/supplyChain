@@ -13,19 +13,19 @@ contract DistributorRole {
   // Define a struct 'distributors' by inheriting from 'Roles' library, struct Role
   Roles.Role private distributors;
   // In the constructor make the address that deploys this contract the 1st distributor
-  constructor() public {
+  constructor() {
     _addDistributor(msg.sender);
   }
 
   // Define a modifier that checks to see if msg.sender has the appropriate role
   modifier onlyDistributor() {
-    require(isDistibuter(msg.sender));
+    require(isDistributor(msg.sender));
     _;
   }
 
   // Define a function 'isDistributor' to check this role
   function isDistributor(address account) public view returns (bool) {
-    return distributor.has(account);
+    return distributors.has(account);
   }
 
   // Define a function 'addDistributor' that adds this role

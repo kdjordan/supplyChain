@@ -58,6 +58,7 @@ App = {
     initWeb3: async function () {
         /// Find or Inject Web3 Provider
         /// Modern dapp browsers...
+        console.log('web3ing')
         if (window.ethereum) {
             App.web3Provider = window.ethereum;
             try {

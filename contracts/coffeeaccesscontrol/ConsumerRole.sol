@@ -13,7 +13,7 @@ contract ConsumerRole {
   // Define a struct 'consumers' by inheriting from 'Roles' library, struct Role
   Roles.Role private consumers;
   // In the constructor make the address that deploys this contract the 1st consumer
-  constructor() public {
+  constructor() {
     _addConsumer(msg.sender);
   }
 
@@ -25,7 +25,7 @@ contract ConsumerRole {
 
   // Define a function 'isConsumer' to check this role
   function isConsumer(address account) public view returns (bool) {
-    return consumer.has(account);
+    return consumers.has(account);
   }
 
   // Define a function 'addConsumer' that adds this role
