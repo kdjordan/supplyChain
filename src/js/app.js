@@ -22,7 +22,6 @@ App = {
         /// Setup access to blockchain
         return await App.initWeb3();
     },
-
     readForm: function () {
         App.sku = $("#sku").val();
         App.upc = $("#upc").val();
