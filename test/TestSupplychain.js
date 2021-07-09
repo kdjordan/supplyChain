@@ -54,6 +54,9 @@ contract('SupplyChain', function(accounts) {
         //add RetailerID to chain for subsequent tests
         supplyChain.addRetailer(retailerID)
 
+        //add ConsumerID to chain for subsequent tests
+        supplyChain.addConsumer(consumerID)
+
         // Declare and Initialize a variable for event
         var eventEmitted = false
         
@@ -277,24 +280,34 @@ contract('SupplyChain', function(accounts) {
     })    
 
     // // 8th Test
-    // it("Testing smart contract function purchaseItem() that allows a consumer to purchase coffee", async() => {
-    //     const supplyChain = await SupplyChain.deployed()
+    it("Testing smart contract function purchaseItem() that allows a consumer to purchase coffee", async() => {
+        const supplyChain = await SupplyChain.deployed()
         
-    //     // Declare and Initialize a variable for event
+        // Declare and Initialize a variable for event
+        var eventEmitted = false
         
-        
-    //     // Watch the emitted event Purchased()
-    
+        // Watch the emitted event Purchased()
+        var event = supplyChain.Purchased()
+        await event.watch((err, res) => {
+            eventEmitted = true
+        })
 
-    //     // Mark an item as Sold by calling function buyItem()
-        
+        // Mark an item as Purchased by calling function purchaseItem()
+        supplyChain.purchaseItem(upc, {from: consumerID})
 
-    //     // Retrieve the just now saved item from blockchain by calling function fetchItem()
-        
+        // Retrieve the just now saved item from blockchain by calling function fetchItem()
+        const resultBufferOne = await supplyChain.fetchItemBufferOne.call(upc)
+        const resultBufferTwo = await supplyChain.fetchItemBufferTwo.call(upc)
 
-    //     // Verify the result set
+        // Verify the result set
+        assert.equal(resultBufferOne[0].toNumber(), sku, 'Error: Invalid item SKU')
+        assert.equal(resultBufferOne[1].toNumber(), upc, 'Error: Invalid item UPC')
+        assert.equal(resultBufferOne[2], consumerID, 'Error: Invalid Owner of Item')
+        assert.equal(resultBufferTwo[8], consumerID, 'Error: Invalid Retailer ID')
+        assert.equal(resultBufferTwo[5], 7, 'Error: Invalid item State')
+        assert.equal(eventEmitted, true, 'Invalid event emitted')     
         
-    // })    
+    })    
 
     // // 9th Test
     // it("Testing smart contract function fetchItemBufferOne() that allows anyone to fetch item details from blockchain", async() => {
