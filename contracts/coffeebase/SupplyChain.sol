@@ -36,7 +36,7 @@ contract SupplyChain is  ConsumerRole, DistributorRole, FarmerRole, RetailerRole
     Shipped,    // 5
     Received,   // 6
     Purchased   // 7
-    }
+  }
 
   State constant defaultState = State.Harvested;
 
@@ -314,7 +314,6 @@ contract SupplyChain is  ConsumerRole, DistributorRole, FarmerRole, RetailerRole
   string  memory originFarmLongitude
   ) 
   {
-    
     // Assign values to the 8 parameters
     itemSKU = items[_upc].sku;
     itemUPC = items[_upc].upc;
@@ -362,7 +361,6 @@ contract SupplyChain is  ConsumerRole, DistributorRole, FarmerRole, RetailerRole
   retailerID = items[_upc].retailerID;
   consumerID = items[_upc].consumerID;
   
-    
   return 
   (
   itemSKU,
