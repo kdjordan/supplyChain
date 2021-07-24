@@ -123,7 +123,7 @@ contract SupplyChain is  ConsumerRole, DistributorRole, FarmerRole, RetailerRole
   modifier sold(uint _upc) {
     require(items[_upc].itemState == State.Sold);
     _;
-  }
+  } 
   
   // Define a modifier that checks if an item.state of a upc is Shipped
   modifier shipped(uint _upc) {
