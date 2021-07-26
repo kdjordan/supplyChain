@@ -4,13 +4,13 @@ The purpose of the dApp is to verify authenticity of am item through a suply cha
 
 UML Diagrams :
 
-![Activity](https://github.com/kdjordan/supplyChain/blob/main/UML/Activity.png)
+![Activity](https://github.com/kdjordan/supplyChain/blob/main/UML/Activity.png)  
 
-![Sequence](https://github.com/kdjordan/supplyChain/blob/main/UML/Sequence.png)
+![State](https://github.com/kdjordan/supplyChain/blob/main/UML/State.png) 
 
-![Data  Model](https://github.com/kdjordan/supplyChain/blob/main/UML/Data-Model.png)
+![Sequence](https://github.com/kdjordan/supplyChain/blob/main/UML/Sequence.png) 
 
-![State](https://github.com/kdjordan/supplyChain/blob/main/UML/State.png)
+![Data  Model](https://github.com/kdjordan/supplyChain/blob/main/UML/Data-Model.png) 
 
 
 We are using the following utlilities in this project :
