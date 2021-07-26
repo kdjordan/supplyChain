@@ -1,14 +1,15 @@
 # Supply chain dApp
 
-The purpose of the dApp is to verify authenticity of am item through a suply chain. In this example, we are tracking coffee as it goes from Farmer to Distributor to Retailer to Consumer.
+The purpose of the dApp is to verify authenticity of an item as it travels through a supply chain. In this example, we are tracking coffee as it goes from Farmer to Distributor to Retailer to Consumer.
 
 UML Diagrams :
 
 ![Activity](https://github.com/kdjordan/supplyChain/blob/main/UML/Activity.png)  
 
+![Sequence](https://github.com/kdjordan/supplyChain/blob/main/UML/Sequence.png) 
+
 ![State](https://github.com/kdjordan/supplyChain/blob/main/UML/State.png) 
 
-![Sequence](https://github.com/kdjordan/supplyChain/blob/main/UML/Sequence.png) 
 
 ![Data  Model](https://github.com/kdjordan/supplyChain/blob/main/UML/Data-Model.png) 
 
