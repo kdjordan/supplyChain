@@ -10,6 +10,13 @@ module.exports = {
       network_id: "*" // Match any network id
     }
   },
+  rinkeby: {
+    provider: () => new HDWalletProvider(process.env.MNENOMIC, "https://rinkeby.infura.io/v3/" + process.env.INFURA_API_KEY),
+      network_id: 4,       // rinkeby's id
+      gas: 4500000,        // rinkeby has a lower block limit than mainnet
+      gasPrice: 10000000000,
+      from: '0xDA67df0a9ee782a31E76CB3018A8612Cfa02d63d'
+  },
   compilers: {
     solc: {
       version: "0.4.24",    // Fetch exact version from solc-bin (default: truffle's version)
