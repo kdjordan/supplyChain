@@ -4,7 +4,9 @@ The purpose of the dApp is to verify authenticity of am item through a suply cha
 
 UML Diagrams :
 
-![State](UML/State.png)
+![Activity](https://github.com/kdjordan/supplyChain/blob/main/UML/Activity.png)
+
+![Sequence](https://github.com/kdjordan/supplyChain/blob/main/UML/Sequence.png)
 
 
 We are using the following utlilities in this project :
