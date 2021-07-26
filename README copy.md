@@ -4,7 +4,7 @@ The purpose of the dApp is to verify authenticity of am item through a suply cha
 
 UML Diagrams :
 
-![State](/UML/state.png)
+![State](UML/State.png)
 
 
 We are using the following utlilities in this project :
