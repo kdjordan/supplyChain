@@ -29,6 +29,4 @@ Deployed to Rinkeby :
 
 contract : [0x4B03214251C548Be643B3923332213c73c23b692](https://rinkeby.etherscan.io/address/0x4b03214251c548be643b3923332213c73c23b692) 
 
-transaction : 
-[0xec2035a37e52ac3930cbddd1bffa1254b4c4f4154158a5be463e8f9ad1a938a7](https://rinkeby.etherscan.io/tx/0xec2035a37e52ac3930cbddd1bffa1254b4c4f4154158a5be463e8f9ad1a938a7) 
 
