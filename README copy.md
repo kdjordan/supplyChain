@@ -1,4 +1,4 @@
-# Supply chain dapp
+# Supply chain dApp
 
 The purpose of the dApp is to verify authenticity of am item through a suply chain. In this example, we are tracking coffee as it goes from Farmer to Distributor to Retailer to Consumer.
 
@@ -16,5 +16,5 @@ NPM Dependencies are :
 Deployed to Rinkeby :
 
 contract : 0x4b03214251c548be643b3923332213c73c23b692
-(https://rinkeby.etherscan.io/address/0x3D5DaDB0973cDFC249eA6a0534CbBf76dBC40EB5)
+[](https://rinkeby.etherscan.io/address/0x3D5DaDB0973cDFC249eA6a0534CbBf76dBC40EB5 "0x4b03214251c548be643b3923332213c73c23b692")
 transaction : x9f83c4600887c1461c66af0323a145c7d6fc6ed74f4d5b15f4c429e4aede8fce
