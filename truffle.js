@@ -8,14 +8,14 @@ module.exports = {
       host: "127.0.0.1",
       port: 8545,
       network_id: "*" // Match any network id
+    },
+    rinkeby: {
+      provider: () => new HDWalletProvider(process.env.MNENOMIC, "https://rinkeby.infura.io/v3/" + process.env.INFURA_API_KEY),
+        network_id: 4,       // rinkeby's id
+        gas: 4500000,        // rinkeby has a lower block limit than mainnet
+        gasPrice: 10000000000,
+        from: '0x27d8d15cbc94527cadf5ec14b69519ae23288b95'
     }
-  },
-  rinkeby: {
-    provider: () => new HDWalletProvider(process.env.MNENOMIC, "https://rinkeby.infura.io/v3/" + process.env.INFURA_API_KEY),
-      network_id: 4,       // rinkeby's id
-      gas: 4500000,        // rinkeby has a lower block limit than mainnet
-      gasPrice: 10000000000,
-      from: '0x27d8d15cbc94527cadf5ec14b69519ae23288b95'
   },
   compilers: {
     solc: {
