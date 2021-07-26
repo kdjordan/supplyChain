@@ -8,6 +8,10 @@ UML Diagrams :
 
 ![Sequence](https://github.com/kdjordan/supplyChain/blob/main/UML/Sequence.png)
 
+![Data  Model](https://github.com/kdjordan/supplyChain/blob/main/UML/Data-Model.png)
+
+![State](https://github.com/kdjordan/supplyChain/blob/main/UML/State.png)
+
 
 We are using the following utlilities in this project :
 * Solidity >=0.4.24
