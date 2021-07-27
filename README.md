@@ -1,110 +1,34 @@
-# Supply chain & data auditing
+# Supply chain dApp
 
-This repository containts an Ethereum DApp that demonstrates a Supply Chain flow between a Seller and Buyer. The user story is similar to any commonly used supply chain process. A Seller can add items to the inventory system stored in the blockchain. A Buyer can purchase such items from the inventory system. Additionally a Seller can mark an item as Shipped, and similarly a Buyer can mark an item as Received.
+The purpose of the dApp is to verify authenticity of an item as it travels through a supply chain. In this example, we are tracking coffee as it goes from Farmer to Distributor to Retailer to Consumer.
 
-The DApp User Interface when running should look like...
+UML Diagrams :
 
-![truffle test](images/ftc_product_overview.png)
+![Activity](https://github.com/kdjordan/supplyChain/blob/main/UML/Activity.png)  
 
-![truffle test](images/ftc_farm_details.png)
+![Sequence](https://github.com/kdjordan/supplyChain/blob/main/UML/Sequence.png) 
 
-![truffle test](images/ftc_product_details.png)
-
-![truffle test](images/ftc_transaction_history.png)
+![State](https://github.com/kdjordan/supplyChain/blob/main/UML/State.png) 
 
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-Please make sure you've already installed ganache-cli, Truffle and enabled MetaMask extension in your browser.
-
-```
-Give examples (to be clarified)
-```
-
-### Installing
-
-A step by step series of examples that tell you have to get a development env running
-
-Clone this repository:
-
-```
-git clone https://github.com/udacity/nd1309/tree/master/course-5/project-6
-```
-
-Change directory to ```project-6``` folder and install all requisite npm packages (as listed in ```package.json```):
-
-```
-cd project-6
-npm install
-```
-
-Launch Ganache:
-
-```
-ganache-cli -m "spirit supply whale amount human item harsh scare congress discover talent hamster"
-```
-
-Your terminal should look something like this:
-
-![truffle test](images/ganache-cli.png)
-
-In a separate terminal window, Compile smart contracts:
-
-```
-truffle compile
-```
-
-Your terminal should look something like this:
-
-![truffle test](images/truffle_compile.png)
-
-This will create the smart contract artifacts in folder ```build\contracts```.
-
-Migrate smart contracts to the locally running blockchain, ganache-cli:
-
-```
-truffle migrate
-```
-
-Your terminal should look something like this:
-
-![truffle test](images/truffle_migrate.png)
-
-Test smart contracts:
-
-```
-truffle test
-```
-
-All 10 tests should pass.
-
-![truffle test](images/truffle_test.png)
-
-In a separate terminal window, launch the DApp:
-
-```
-npm run dev
-```
-
-## Built With
-
-* [Ethereum](https://www.ethereum.org/) - Ethereum is a decentralized platform that runs smart contracts
-* [IPFS](https://ipfs.io/) - IPFS is the Distributed Web | A peer-to-peer hypermedia protocol
-to make the web faster, safer, and more open.
-* [Truffle Framework](http://truffleframework.com/) - Truffle is the most popular development framework for Ethereum with a mission to make your life a whole lot easier.
+![Data  Model](https://github.com/kdjordan/supplyChain/blob/main/UML/Data-Model.png) 
 
 
-## Authors
+We are using the following utlilities in this project :
+* Solidity >=0.4.24
+* Ganache CLI v6.12.2 (ganache-core: 2.13.2)
+* Truffle v4.1.14
+* Node 10.16.3
 
-See also the list of [contributors](https://github.com/your/project/contributors.md) who participated in this project.
+NPM Dependencies are :
+* truffle-hdwallet-provider ^1.0.17
+* dotenv ^10.0.0
+* web3.min.js was added directly in scr/js 
 
-## Acknowledgments
+Deployed to Rinkeby :
 
-* Solidity
-* Ganache-cli
-* Truffle
-* IPFS
+contract : [0x4B03214251C548Be643B3923332213c73c23b692](https://rinkeby.etherscan.io/address/0x4b03214251c548be643b3923332213c73c23b692) 
+
+transaction : 
+[0x55a39a93451e9b40b55a254c9b3ca7773bc13100f7590eb38c5223ecac49fd67](https://rinkeby.etherscan.io/tx/0x55a39a93451e9b40b55a254c9b3ca7773bc13100f7590eb38c5223ecac49fd67) 
+
